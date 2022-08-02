@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <meta charset="windows-1251">
+    <title>
+      БайкШоп - интернет-магазин велосипедов
+    </title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="primary.css">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="broker/index.css">
+    <script src="broker/brokerage.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">
+        </div>
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="#">
+                Главная
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Оплата и доставка
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Контакты
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Корзина (2)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <h1>
+          IMPACT SL 29
+        </h1>
+        <img width="500" src ="https://cdn.picpng.com/bicycles/bicycles-illustration-35981.png" class="photo">
+        Идеальное сочетание элегантности и скорости. Монококовая (бесшовная) рама со стильно изогнутыми гидроформированными трубами. Оптимальная тяга на подъемах к вершинам и мощная энергия при скоростном спуске. Отличный вариант для кросс-кантрийных поездок.
+        <br>
+        <br>
+        <b>
+          Размер рамы:
+        </b>
+        44, 48, 52, 56
+        <br>
+        <b>
+          Материал рамы:
+        </b>
+        Алюминий
+        <br>
+        <b>
+          Марка оборудования:
+        </b>
+        Magura,Shimano,Sram
+        <br>
+        <b>
+          Тип тормозов:
+        </b>
+        Гидравлика
+        <br>
+        <b>
+          Амортизация:
+        </b>
+        C амортизационной вилкой
+        <br>
+        <b>
+          Стиль:
+        </b>
+        Пересеченная местность
+        <br>
+        <br>
+        Цена:
+        <h2>
+          56 000 тг. 
+        </h2>
+        <div class="button large gray" href="#" id="brg-btn">
+          <span>
+            В корзину
+          </span>
+        </div>
+        <br>
+      </div>
+      <hr>
+      <div class="footer">
+        Umirzakov Madiyar <a href="#">Brokerage test wiget</a>
+      </div>
+    </div>
+
+
+    <script>
+      const btn = document.getElementById("brg-btn");
+      btn.addEventListener("click", function () {
+        Brokerage.run({
+          storeId: 23,
+          storeName: "Веломир",
+          totalAmount: "56000",
+          products: [
+            {
+              code: "06M",
+              name: "IMPACT SL 29",
+              price: "56000",
+              quantity: 1,
+            },
+          ],
+          redirectUrl: "https://brokerage24.kz/",
+          onError: (err) => {
+            console.log(err)
+          },
+          onSuccess: (data) => {
+            alert("success callback");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

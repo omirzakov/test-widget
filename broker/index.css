@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.brokerage-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0000009f;
+    font-family: 'Inter', sans-serif;
+}
+
+.brokerage-wrapper textarea::placeholder {
+    color: #344563;
+    font-size: 14px;
+}
+
+.brokerage-wrapper input {
+    padding: 0;
+    margin: 0;
+    color: #111827 !important;
+}
+
+.brokerage-wrapper p {
+    padding: 0;
+    margin: 0;
+}
+
+.brokerage-wrapper input, textarea, button {
+    font-family: 'Inter', sans-serif;
+}
+
+.brokerage-layout {
+    width: 1080px;
+    border-radius: 6px;
+    padding: 30px;
+    background-color: #ffff;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+/* Cart Styles */
+
+.brg-cart-block {
+    margin-top: 10px;
+    border: 1px solid #D2D6DC;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.brg-title {
+    color: #3667D6;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.brg-cart-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.brg-cart-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.brg-product-list {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Step Styles */
+
+.brg-credit-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 320px;
+    height: 56px;
+    padding: 18px 24px;
+    background: #F5FBFF;
+    border: 1px solid #7DABF8;
+}
+
+.brg-step-count {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    border: 1px solid #7DABF8;
+}
+
+.brg-step-text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.brg-input {
+    outline: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    border-radius: 16px;
+    border: 1px solid #E5E7EB;
+    max-width: 325px;
+    width: 325px;
+}
+
+@media screen and (max-width: 920px) {
+    .brg-input {
+        
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .brokerage-layout {
+        height: calc(100vh - 120px);
+        overflow-y: scroll;
+    }
+
+    .brg-cart-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brg-product-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .brg-input {
+        width: max-content;
+    }
+    
+}
