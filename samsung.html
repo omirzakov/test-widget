@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="windows-1251" />
+    <title>Samsung Test Widget</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=cyrillic-ext,latin"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="samsung.css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://dev.brokerage24.kz/api/static/widget/brokerage.css"
+    />
+    <link rel="stylesheet" href="https://dev.brokerage24.kz/api/static/widget/brokerage.css">
+    <script src="https://dev.brokerage24.kz/api/static/widget/brokerage.js"></script>
+    <script src="https://dev.brokerage24.kz/api/static/widget/brokerage.js"></script>
+  </head>
+  <body>
+    <div class="samsung-header">
+      <img src="img/samsung-logo-blue.svg" alt="samsung" />
+    </div>
+
+    <div class="wrapper">
+      <div class="product-item">
+        <div class="product-left">
+          <div class="product-image">
+            <img src="img/z-flip.webp" alt="" />
+          </div>
+          <div>
+            <p class="product-name">Galaxy Z Flip4</p>
+            <p>Лавандовый, 128 ГБ</p>
+            <p>SM-F721BLVGSKZ</p>
+          </div>
+        </div>
+        <div class="product-right">
+          <p class="product-price">549 970 ₸</p>
+        </div>
+      </div>
+
+      <div class="order">
+        <h5>Доступные способы оплаты:</h5>
+        <p>
+          Рассрочка - ограничения по сумме смотрите здесь
+        </p>
+        <p>
+          Оплата картой при получении - доступно только в этих городах
+        </p>
+        <p>
+          Оплата картой на сайте
+        </p>
+        <p>
+          Samsung Pay
+        </p>
+        <p>
+          Kaspi Pay
+        </p>
+
+        <div class="total-sum">
+          <p>Общая сумма</p>
+          <p>
+            549 970 ₸
+          </p>
+        </div>
+        <div class="btn" id="brg-btn">
+          Оформить заказ
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const btn = document.getElementById("brg-btn");
+      btn.addEventListener("click", function () {
+        Brokerage.run({
+          mode: "dev",
+          storeId: 23,
+          storeName: "Bike Shop",
+          totalAmount: "56000",
+          token: "e4f3bb73cdbd82c792daa77ab8d81dc5",
+          products: [
+            {
+              code: "06M",
+              price: "56000",
+              quantity: 1,
+            },
+          ],
+          styles: {
+            step: {
+              activeStyle: {
+                background: '#F5FBFF',
+                color: '#2189FF',
+                borderColor: '#7DABF8'
+              }
+            },
+            button: {
+              color: 'white',
+              background: '#2189FF'
+            }
+          },
+          redirectUrl: "https://brokerage24.kz/",
+          logoImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Samsung_logo_blue.png/1200px-Samsung_logo_blue.png',
+          onError: (err) => {
+            console.log(err)
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

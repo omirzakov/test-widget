@@ -1,0 +1,91 @@
+@font-face {
+    font-family: SamsungOne;
+    src: url('./fonts/SamsungOne-400_v1.1.ttf');
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+*, body {
+    font-family: 'SamsungOne', sans-serif;
+}
+
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.samsung-header {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-image {
+    width: 94px;
+    height: 94px;
+}
+
+.product-image img {
+    max-width: 100%;
+}
+
+.product-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 40px;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.product-left {
+    display: flex;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+.product-name {
+    font-weight: 700;
+}
+
+.order {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.order h5 {
+    font-size: 22px;
+}
+
+.total-sum {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-sum p:last-child {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #2189ff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.brokerage-font {
+    font-family: 'SamsungOne' !important;
+}
