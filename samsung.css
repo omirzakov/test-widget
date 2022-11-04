@@ -89,3 +89,28 @@ p {
 .brokerage-font {
     font-family: 'SamsungOne' !important;
 }
+
+.waiting-wrapper {
+    margin-top: 40px;
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 20px 0;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #334acc;
+    padding: 20px;
+}
+
+.waiting-label {
+    font-size: 22px;
+}
+
+.waiting-wrapper div {
+    text-align: left;
+}
+
+.waiting-wrapper h5 {
+    font-size: 20px;
+}

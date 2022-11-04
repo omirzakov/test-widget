@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="product-right">
-          <p class="product-price">549 970 ₸</p>
+          <p class="product-price">12 000 ₸</p>
         </div>
       </div>
 
@@ -60,7 +60,7 @@
         <div class="total-sum">
           <p>Общая сумма</p>
           <p>
-            549 970 ₸
+            12 000 ₸
           </p>
         </div>
         <div class="btn" id="brg-btn">
@@ -71,17 +71,17 @@
 
     <script>
       const btn = document.getElementById("brg-btn");
+      console.log(location)
       btn.addEventListener("click", function () {
         Brokerage.run({
           mode: "dev",
           storeId: 23,
-          storeName: "Bike Shop",
-          totalAmount: "56000",
+          storeName: "Samsung",
           token: "e4f3bb73cdbd82c792daa77ab8d81dc5",
           products: [
             {
               code: "06M",
-              price: "56000",
+              price: "12000",
               quantity: 1,
             },
           ],
@@ -99,6 +99,7 @@
             }
           },
           redirectUrl: "https://brokerage24.kz/",
+          waitingUrl: `${location.origin}/waiting.html`,
           logoImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Samsung_logo_blue.png/1200px-Samsung_logo_blue.png',
           onError: (err) => {
             console.log(err)
