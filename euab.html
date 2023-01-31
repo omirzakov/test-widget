@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="primary.css" />
+    <link
+      rel="stylesheet"
+      href="https://dev.brokerage24.kz/api/static/widget/brokerage.css"
+    />
+    <script src="https://dev.brokerage24.kz/api/static/widget/brokerage.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      "
+    >
+      <div class="button large gray" href="#" id="max-null">
+        <span> None </span>
+      </div>
+      <div class="button large gray" href="#" id="max-1">
+        <span> Max Period 1 </span>
+      </div>
+      <div class="button large gray" href="#" id="max-9">
+        <span> Max Period 9 </span>
+      </div>
+      <div class="button large gray" href="#" id="max-12">
+        <span> Max Period 12 </span>
+      </div>
+    </div>
+
+    <script>
+      const withNull = document.getElementById("max-null");
+      const max1 = document.getElementById("max-1");
+      const max9 = document.getElementById("max-9");
+      const max12 = document.getElementById("max-12");
+
+      withNull.addEventListener("click", function() {
+        callBrokereage(null);
+      });
+
+      max1.addEventListener("click", function() {
+        callBrokereage("1");
+      });
+
+      max9.addEventListener("click", function() {
+        callBrokereage("9");
+      });
+
+      max12.addEventListener("click", function() {
+        callBrokereage("12");
+      });
+
+      const callBrokereage = (maxPeriod = null) => {
+        const data = {
+          mode: "dev",
+          storeId: 23,
+          orderId: "IMPACT_SL_29",
+          storeName: "Bike Shop",
+          totalAmount: "56000",
+          token: "e4f3bb73cdbd82c792daa77ab8d81dc5",
+          waitingUrl: "https://dev.brokerage24.kz/",
+          classNames: {
+            smsBtn: "test-btn-class",
+          },
+          products: [
+            {
+              code: "06M",
+              price: "56000",
+              quantity: 1,
+            },
+          ],
+          redirectUrl: "https://brokerage24.kz/",
+          onError: (err) => {
+            console.log(err);
+          },
+          classNames: {
+            smsBtn: "sms-btn-class",
+          },
+        };
+
+        if(maxPeriod) {
+            data.maxPeriod = maxPeriod;
+        }
+
+        alert(JSON.stringify({ maxPeriod: maxPeriod }));
+
+
+        Brokerage.run(data);
+      };
+    </script>
+  </body>
+</html>
